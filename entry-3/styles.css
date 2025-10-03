@@ -1,37 +1,16 @@
-<style>
-body {
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    background-image: url("images/sub.png");
-    background-size: cover;        
-    background-position: 0 0;    
-    background-repeat: repeat-x;   
-    animation: moveSubway 10s linear infinite;
-    color: white;
-  }
+.content {
+  position: relative;
+  z-index: 10;
+  color: white;        
+  text-align: center;   
+  display: flex;     
+  justify-content: center;
+  align-items: center;
+  height: 100vh;        
+  padding: 0 20px;
+}
 
-  @keyframes moveSubway {
-    from {
-      background-position: 0 0;
-    }
-    to {
-      background-position: -2000px 0; 
-    }
-  }
-
-  h1, h2, a {
-    background: rgba(0,0,0,0.5);
-    padding: 10px;
-    border-radius: 8px;
-    max-width: 600px;
-  }
-
-  a {
-    display: inline-block;
-    margin-top: 20px;
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-  }
-</style>
+.content h2 {
+  color: white;        
+  text-align: center;  
+}

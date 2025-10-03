@@ -1,2 +1,41 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-image: url('image/dinner.png'); 
+  background-size: cover;    
+  background-position: center; 
+  background-repeat: no-repeat; 
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;       
+}
+
+.content {
+  position: relative;
+  z-index: 10;
+  color: white;        
+  text-align: center;   
+  display: flex;     
+  justify-content: center;
+  align-items: center;
+  height: 100vh;        
+  padding: 0 20px;
+}
+
+.content h2 {
+  color: white;        
+  text-align: center;  
+}
 
 
+.carti-btn-iammusic {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  font-size: 28px;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  z-index: 10;
+}
