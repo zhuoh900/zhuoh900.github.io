@@ -4,24 +4,120 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Urban Time</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Urban Time</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;}
+    body, html {
+      height: 100%;
+      overflow: hidden;}
+
+   
+    .video-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;}
+
+    
+    .content {
+      position: relative;
+      z-index: 10;
+      color: white;
+      text-align: center;
+      margin-top: 20vh;
+      padding: 0 20px;}
+
+    .content h1, 
+    .content h2, 
+    .content a {
+      
+      padding: 10px;
+      border-radius: 8px;
+      max-width: 90%;}
+
+    .content a {
+      margin-top: 20px;
+      display: block;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;}
+  </style>
+
+
+
+
+ 
+
+
+
+
+
+<style>
+  .carti-btn-iammusic {
+    position: fixed;      
+    left: 20px;            
+    bottom: 20px;           
+    padding: 0;             
+    font-size: 28px;
+    font-family: sans-serif; 
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+    z-index: 10;          
+  }
+
+  .carti-btn-iammusic:hover {
+    color: black;    
+    text-shadow: 0 0 10px white;
+    transform: scale(1.1);
+  }
+</style>
+
+<a href="../index.html" class="carti-btn-iammusic">BACK</a>
+
+
+
+
+
+
+
+
 </head>
+
+
 <body>
-<h1>Urban time</h1>
-<h2> my idea is use moving subway as background, when u click the subway u will go inside and see the clock showing in the subway;
-    Subway animation, the tracks move parallel to each other, and the carriages pass by like fragments of time
+  <video class="video-bg" autoplay muted loop playsinline>
+    <source src="video/sub.mp4" type="video/mp4">
+    
+  </video>
 
-</h2>
-<h2>Rush Hour Timeline</h2>
+  <div class="content">
+    
 
-
-
-
-
-
- <img src="images/sub.png">
+  </div>
 
 
-  <a href="../index.html">🏠 Home</a>
 
 </body>
+</html>
+
 </html>

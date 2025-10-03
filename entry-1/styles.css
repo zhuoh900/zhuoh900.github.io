@@ -1,24 +1,40 @@
 body {
-    background-color: rgb(255, 255, 255);
-
-
-
-
-    color:rgb(0, 0, 0)
-
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100%;
+  background-image: url('image/mao.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: 'proxima-nova', sans-serif;
+  color: white;
 }
 
+h1, h2 {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 20px;
+  text-shadow: 0 0 5px black;}
 
 
-
-
-
-body {
-
-  font-family: "swiss-721-bt-rounded", sans-serif;
-font-weight: 700;
-font-style: normal;
-
+.back {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  font-size: 28px;
+  font-family: sans-serif;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all 0.3s ease;
+  z-index: 10;
 }
 
-
+.back{
+  color: black;
+  text-shadow: 0 0 10px white;
+  transform: scale(1.1);
+}
