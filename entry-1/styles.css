@@ -8,22 +8,20 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   font-family: 'proxima-nova', sans-serif;
-  color: white;
-}
+  color: white;}
 
 h1, h2 {
   position: relative;
   z-index: 1;
   text-align: center;
-  padding: 20px;
-  text-shadow: 0 0 5px black;}
+  padding: 20px;}
 
 
 .back {
   position: fixed;
   left: 20px;
-  bottom: 20px;
-  font-size: 28px;
+  bottom: 60px;
+  font-size: 30px;
   font-family: sans-serif;
   color: white;
   text-decoration: none;
@@ -33,7 +31,7 @@ h1, h2 {
   z-index: 10;
 }
 
-.back{
+.carti-btn-iammusic:hover {
   color: black;
   text-shadow: 0 0 10px white;
   transform: scale(1.1);

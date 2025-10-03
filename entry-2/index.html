@@ -1,29 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>entry-2</title>
-    <link rel="stylesheet" href="https://use.typekit.net/idn8ccp.css">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Entry 2 - Tadao Ando</title>
+  <link rel="stylesheet" href="https://use.typekit.net/idn8ccp.css">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+ 
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: Arial, Helvetica, sans-serif;
+      color: black;}
 
+    
+    body {
+      background-image: url('images/church.png');
+      background-size: cover;     
+      background-position: center;  
+      background-repeat: no-repeat; 
+      position: relative;}
+
+    
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255,255,255,0.3); 
+      z-index: 0;
+    }
+
+    h1, h2 {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 20px;
+    }
+
+   
+    .carti-btn-iammusic {
+      position: fixed;
+      left: 20px;
+      bottom: 20px;
+      font-size: 28px;
+      font-family: Arial, Helvetica, sans-serif;
+      color: black;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      transition: all 0.3s ease;
+      z-index: 10;
+    }
+
+    .carti-btn-iammusic:hover {
+      color: white;
+      text-shadow: 0 0 10px black;
+      transform: scale(1.1);
+    }
+  </style>
 </head>
 <body>
-    <a href="../index.html">🏠 Home</a>
-
-                  <h1>Emotional Time</h1>
-<h2>concept:the speed of depends on the emotion. when u feel happy it moves fast, when u feel sad it moves slow</h2>
-<h3>Different colors represent different emotions of time: cold colors = slow, warm colors = fast</h3>
-<h3>i want the interaction be like when the user accelarate the mouse the color turns warm, when they are moving the mouse slowly or not moving the color turns cold</h3>
+   
+<div class="overlay"></div>
+                  <h1>Tadao Ando </h1>
+<h2>Designed by Japanese architect Tadao Ando in 1989, the Church of the Light in Ibaraki, Osaka, is one of the most celebrated examples of minimalist architecture. The church is defined by a simple concrete box intersected by a cross-shaped cut in the wall, allowing natural light to create a striking spiritual experience. With no ornamentation, the space emphasizes the relationship between light, shadow, and emptiness—turning architecture itself into a form of timeless meditation.</h2>
 
 
 
 
-
-
-
-
-<img src="images/emo.png">
+<a href="../index.html" class="carti-btn-iammusic">BACK</a>
 
 </body>
 </html>
