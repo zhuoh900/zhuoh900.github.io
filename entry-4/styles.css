@@ -39,3 +39,11 @@ body {
   letter-spacing: 2px;
   z-index: 10;
 }
+
+
+
+.content{
+  display:flex;
+  justify-content:center;
+  
+}
