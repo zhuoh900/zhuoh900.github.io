@@ -30,9 +30,3 @@ h1, h2 {
   transition: all 0.3s ease;
   z-index: 10;
 }
-
-.back {
-  color: black;
-  text-shadow: 0 0 10px white;
-  transform: scale(1.1);
-}
