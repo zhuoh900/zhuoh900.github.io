@@ -31,7 +31,7 @@ h1, h2 {
   z-index: 10;
 }
 
-.carti-btn-iammusic:hover {
+.back {
   color: black;
   text-shadow: 0 0 10px white;
   transform: scale(1.1);
