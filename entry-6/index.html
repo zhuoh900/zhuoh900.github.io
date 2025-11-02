@@ -4,6 +4,22 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>DeLorean DMC-12 — Entry: Urban Time</title>
+  <style>
+    .entry-container {
+      display: flex; /* 并排布局 */
+      align-items: flex-start; /* 顶部对齐 */
+      gap: 20px; /* 图片和文字之间的间距 */
+      margin: 20px;
+    }
+    .entry-text {
+      flex: 1; /* 占满剩余空间 */
+    }
+    .entry-image img {
+      max-width: 300px; /* 控制图片大小 */
+      height: auto;
+      border-radius: 8px; /* 可选：圆角 */
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -11,8 +27,22 @@
     <h2>Entry: 1980s — Pop Culture & Futurism</h2>
   </header>
 
-  <h1>Why the DeLorean DMC-12 is a Classic</h1>
-  <h2>The DeLorean DMC-12 is considered a classic not just for its engineering, but for its lasting cultural impact. Its brushed stainless-steel body and distinctive gull-wing doors gave it a futuristic, timeless appearance. Although its production was brief (1981–1983) and the company faced commercial struggles, the car became an icon after starring as a time machine in the Back to the Future trilogy. The DeLorean represents the intersection of innovative design, pop culture, and storytelling—a vehicle whose legend has far outlived its mechanical reality.</h2>
+  <div class="entry-container">
+  <div class="entry-text">
+    <h2>Why the DeLorean DMC-12 is a Classic</h2>
+    <p>
+      The DeLorean DMC-12 is considered a classic not just for its engineering, but for its lasting cultural impact.
+      Its brushed stainless-steel body and distinctive gull-wing doors gave it a futuristic, timeless appearance.
+      Although its production was brief (1981–1983) and the company faced commercial struggles, the car became an icon
+      after starring as a time machine in the <em>Back to the Future</em> trilogy. The DeLorean represents the intersection
+      of innovative design, pop culture, and storytelling—a vehicle whose legend has far outlived its mechanical reality.
+    </p>
+  </div>
+
+  <div class="entry-image">
+    <img src="dmc.png" alt="DeLorean DMC-12">
+  </div>
+</div>
 
 
 </body>
