@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Random Engine Generator</title>
+</head>
+<body>
+
+<h1>Random Engine Cylinder</h1>
+
+<button onclick="generateEngine()">Generate Engine</button>
+
+<p id="output">Click to see</p>
+
+<script>
+  const cylinders = [4, 6, 8, 10, 12];
+
+  function generateEngine() {
+    const randomCyl = cylinders[Math.floor(Math.random() * cylinders.length)];
+    document.getElementById("output").innerText = randomCyl + "-Cylinder Engine";
+  }
+</script>
+
+</body>
+</html>
