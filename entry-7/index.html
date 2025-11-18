@@ -1,7 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Random Engine Generator</title>
+  <style>
+    body {
+      background: black;
+      color: white;
+      font-family: monospace;
+      padding: 20px;
+    }
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    button {
+      font-family: monospace;
+      padding: 5px 10px;
+      margin-bottom: 20px;
+      cursor: pointer;
+      background: #222;
+      color: white;
+      border: 1px solid white;
+    }
+
+    #output {
+      margin: 10px 0 20px;
+    }
+  </style>
 </head>
 <body>
 
@@ -10,6 +43,8 @@
 <button onclick="generateEngine()">Generate Engine</button>
 
 <p id="output">Click to see</p>
+
+<a href="../index.html">&lt; Back to Main Page</a>
 
 <script>
   const cylinders = [4, 6, 8, 10, 12];
