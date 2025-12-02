@@ -2,37 +2,50 @@
 <html>
 <head>
   <link rel="stylesheet" href="style.css">
-
   <style>
     body {
       background: black;
       color: white;
       font-family: monospace;
-      padding: 20px;}
-    a { color: white;
-   text-decoration: none; } a:hover { text-decoration: underline;}
-button {font-family: monospace;
-   padding: 5px 10px;
-  margin-bottom: 20px;
-  cursor: pointer;
-  background: #222;
- color: white;
-border: 1px solid white;}
- #output {margin: 10px 0 20px;}
-    </style>
+      padding: 20px;
+      text-align: center;
+    }
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    input {
+      width: 300px;
+      margin-top: 15px;
+    }
+
+    h1 {
+      margin-bottom: 30px;
+    }
+  </style>
 </head>
+
 <body>
 
-<h1>Car Speed Controller</h1>
+<h1>Car RPM Controller</h1>
 
-<div id="car"></div>
+<div id="rpmGauge">
+  <img id="gaugeImg" src="rpm.png">
+  <div id="needle"></div>
+</div>
 
-<div class="label">Speed:</div>
-<input id="speedSlider" type="range" min="0" max="100" value="30">
 
-<div id="speedBar"></div>
+<div class="label">RPM:</div>
+<input id="rpmSlider" type="range" min="0" max="8000" value="2000">
 
 <script src="script.js"></script>
+
+<br><br>
 <a href="../index.html">&lt; Back to Main Page</a>
 
 </body>

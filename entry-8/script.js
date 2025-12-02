@@ -1,6 +1,9 @@
-const slider = document.getElementById("speedSlider");
-const bar = document.getElementById("speedBar");
+const slider = document.getElementById("rpmSlider");
+const needle = document.getElementById("needle");
+
 
 slider.addEventListener("input", () => {
-  bar.style.width = slider.value + "%";
+  const rpm = slider.value;
+  const angle = (rpm / 8000) * 240 - 140;
+  needle.style.transform = `rotate(${angle}deg)`;
 });
