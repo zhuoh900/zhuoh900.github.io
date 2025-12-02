@@ -1,0 +1,17 @@
+body {
+  font-family: monospace;
+  background: #fafafa;
+  padding: 30px;
+}
+
+#speedBar {
+  height: 15px;
+  width: 30%;
+  background: rgb(255, 255, 255);
+  margin-top: 20px;
+  transition: width 0.2s linear;
+}
+
+input {
+  width: 300px;
+}
