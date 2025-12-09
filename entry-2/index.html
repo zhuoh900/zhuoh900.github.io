@@ -2,59 +2,90 @@
 <html>
 <head>
   <meta charset="utf-8" />
-  <title>Supra & BMW B58</title>
+  <title>Gear 2 — Supra & BMW B58</title>
 
-  <style>
-    body {
-      background: black;  color: white;    font-family: monospace;    padding: 20px;
-    }
+<style>
 
-    header, footer {
-      text-align: center;    margin-bottom: 30px;
-    }
+  body {
+    margin: 0;
+    padding: 0;
+    background: #050505;
+    color: #f7f7f7;
+    font-family: "Inter", monospace;
+  }
+  .entry-container {
+    max-width: 760px;
+    padding: 50px 20px;
+    margin: 0 auto;
+    line-height: 1.7;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeIn 0.7s ease forwards;
+  }
 
-    .hero img {
-      display: block;  width: 480px;   height: auto;  margin: 40px auto;
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
     }
+  }
 
-    .content {
-      max-width: 650px; margin: 0 auto;  line-height: 1.6;   text-align: justify;   text-justify: inter-word;
-    }
+  .entry-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
 
-    a {
-      color: white;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-  </style>
+  .entry-sub {
+    text-align: center;
+    opacity: 0.7;
+    margin-bottom: 40px;
+  }
+
+  .entry-img {
+    display: block;
+    width: 100%;
+    border-radius: 14px;
+    margin: 35px 0;
+    transition: transform 0.3s ease;
+  }
+  .entry-img:hover {
+    transform: scale(1.03);
+  }
+  a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  :root { --accent: #4db4ff; } 
+  body.gear-2 { --accent: #4db4ff; }
+</style>
 </head>
 
-<body>
+<body class="gear-2">
 
-<header>
-  <h2>Supra & BMW B58</h2>
-</header>
+<div class="entry-container">
 
-<main>
-  <section class="hero">
-    <img src="b58.png">
-  </section>
+  <h1 class="entry-title">Gear 2 — Supra & BMW B58</h1>
+ 
 
-  <section class="content">
-    <p>
-      The Toyota Supra A90 and modern BMWs share the same 3.0L B58 turbo inline-six, 
-      but each brand tunes it differently. In the Supra, it’s sportier, punchy, and 
-      track-focused, while BMW emphasizes smooth, high-RPM refinement. Despite the shared 
-      engine, they deliver two distinct driving experiences, both legendary and highly tunable.
-    </p>
-  </section>
-</main>
+  <img src="b58.png" class="entry-img" alt="B58 Engine">
 
-<footer>
-  <a href="../index.html">&lt; Back to Main Page</a>
-</footer>
+  <p>
+    The Toyota Supra A90 and modern BMWs share the same 3.0L B58 turbo inline-six,
+    but each brand tunes it differently. In the Supra, it’s sportier, punchy, and
+    track-focused, while BMW emphasizes smooth, high-RPM refinement. Despite the
+    shared engine, they deliver two distinct driving experiences, both legendary and
+    highly tunable.
+  </p>
+
+  <p style="margin-top:40px; text-align:center;">
+    <a href="../index.html">&lt; Back to Main Page</a>
+  </p>
+
+</div>
 
 </body>
 </html>

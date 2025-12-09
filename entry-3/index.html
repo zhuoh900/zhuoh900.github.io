@@ -2,85 +2,103 @@
 <html>
 <head>
   <meta charset="utf-8" />
-  <title>SLR McLaren</title>
+  <title>Gear 3 — SLR McLaren</title>
 
-  <style>
-    body {
-      background: black;
-      color: white;
-      font-family: monospace;
-      padding: 20px;
+<style>
+ 
+  body {
+    margin: 0;
+    padding: 0;
+    background: #050505;
+    color: #f7f7f7;
+    font-family: "Inter", monospace;
+  }
+
+  .entry-container {
+    max-width: 760px;
+    padding: 50px 20px;
+    margin: 0 auto;
+    line-height: 1.7;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeIn 0.7s ease forwards;
+  }
+
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
     }
+  }
 
-    header, footer {
-      text-align: center;
-      margin-bottom: 30px;
-    }
+  .entry-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
 
-    .hero img {
-      display: block;
-      width: 480px;
-      height: auto;
-      margin: 40px auto;
-    }
+  .entry-sub {
+    text-align: center;
+    opacity: 0.7;
+    margin-bottom: 40px;
+  }
 
-    .content {
-      max-width: 650px;
-      margin: 0 auto;
-      line-height: 1.6;
+  .entry-img {
+    display: block;
+    width: 100%;
+    border-radius: 14px;
+    margin: 35px 0;
+    transition: transform 0.3s ease;
+  }
+  .entry-img:hover {
+    transform: scale(1.03);
+  }
 
-      /* 两端对齐 */
-      text-align: justify;
-      text-justify: inter-word;
-    }
+  a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
 
-    a {
-      color: white;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-  </style>
+  :root { --accent: #ffe85f; } 
+  body.gear-3 { --accent: #ffe85f; }
+</style>
 </head>
 
-<body>
+<body class="gear-3">
 
-<header>
-  <h2>Mercedes-Benz SLR McLaren</h2>
-</header>
+<div class="entry-container">
 
-<main>
-  <section class="hero">
-    <img src="slr.png">
-  </section>
+  <h1 class="entry-title">Gear 3 — Mercedes-Benz SLR McLaren</h1>
 
-  <section class="content">
-    <p>
-      The SLR McLaren is a supercar created by Mercedes-Benz and McLaren from 2003–2010. 
-      The name comes from “Sport Leicht Rennsport,” a nod to the legendary 1950s 300 SLR.
-    </p>
+  <img src="slr.png" class="entry-img" alt="SLR McLaren">
 
-    <p>
-      It uses a hand-built 5.4L supercharged V8 from AMG. Front-engine, long nose, 
-      butterfly doors — a mix of Le Mans race car and luxury grand tourer.
-    </p>
+  <p>
+    The SLR McLaren is a supercar created by Mercedes-Benz and McLaren from 2003–2010. 
+    The name comes from “Sport Leicht Rennsport,” a nod to the legendary 1950s 300 SLR.
+  </p>
 
-    <p>
-      The body is made from Formula 1–grade carbon fiber, and the airbrake wing is inspired 
-      by race car aerodynamics. It’s part race machine, part luxury experiment, part madness.
-    </p>
+  <p>
+    It uses a hand-built 5.4L supercharged V8 from AMG. Front-engine, long nose, 
+    butterfly doors — a mix of Le Mans race car and luxury grand tourer.
+  </p>
 
-    <p>
-      Enthusiasts see the SLR as the last Mercedes with true McLaren DNA.
-    </p>
-  </section>
-</main>
+  <p>
+    The body is made from Formula 1–grade carbon fiber, and the airbrake wing is inspired 
+    by race car aerodynamics. It’s part race machine, part luxury experiment, part madness.
+  </p>
 
-<footer>
-  <a href="../index.html">&lt; Back to Main Page</a>
-</footer>
+  <p>
+    Enthusiasts see the SLR as the last Mercedes with true McLaren DNA.
+  </p>
+
+  <p style="margin-top:40px; text-align:center;">
+    <a href="../index.html">&lt; Back to Main Page</a>
+  </p>
+
+</div>
 
 </body>
 </html>

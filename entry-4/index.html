@@ -2,84 +2,100 @@
 <html>
 <head>
   <meta charset="utf-8" />
-  <title>BMW M3 E46</title>
+  <title>Gear 4 — BMW M3 E46</title>
 
-  <style>
-    body {
-      background: black;
-      color: white;
-      font-family: monospace;
-      padding: 20px;
-    }
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    background: #050505;
+    color: #f7f7f7;
+    font-family: "Inter", monospace;
+  }
+  .entry-container {
+    max-width: 760px;
+    padding: 50px 20px;
+    margin: 0 auto;
+    line-height: 1.7;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeIn 0.7s ease forwards;
+  }
 
-    header, footer {
-      text-align: center;
-      margin-bottom: 30px;
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
     }
+  }
+  .entry-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
 
-    .hero img {
-      display: block;
-      width: 480px;
-      height: auto;
-      margin: 40px auto;
-    }
+  .entry-sub {
+    text-align: center;
+    opacity: 0.7;
+    margin-bottom: 40px;
+  }
 
-    .content {
-      max-width: 650px;
-      margin: 0 auto;
-      line-height: 1.6;
-      text-align: justify;
-      text-justify: inter-word;
-    }
+  .entry-img {
+    display: block;
+    width: 100%;
+    border-radius: 14px;
+    margin: 35px 0;
+    transition: transform 0.3s ease;
+  }
+  .entry-img:hover {
+    transform: scale(1.03);
+  }
+  a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
 
-    a {
-      color: white;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-  </style>
+  :root { --accent: #ffffff; } 
+  body.gear-4 { --accent: #ffffff; }
+</style>
 </head>
 
-<body>
+<body class="gear-4">
 
-<header>
-  <h2>BMW M3 E46</h2>
-</header>
+<div class="entry-container">
 
-<main>
-  <section class="hero">
-    <img src="e46.png">
-  </section>
+  <h1 class="entry-title">Gear 4 — BMW M3 E46</h1>
 
-  <section class="content">
-    <p>
-      The E46 M3 was produced from 2000–2006 and is often considered the perfect 
-      balance of size, power, and analog driving feel.
-    </p>
+  <img src="e46.png" class="entry-img" alt="BMW M3 E46">
 
-    <p>
-      It uses the S54 engine — a high-revving 3.2L inline-six with motorsport roots. 
-      Naturally aspirated, razor sharp, and one of BMW’s greatest engines.
-    </p>
+  <p>
+    The E46 M3 was produced from 2000–2006 and is often considered the perfect 
+    balance of size, power, and analog driving feel.
+  </p>
 
-    <p>
-      The car is known for its balanced chassis, hydraulic steering, and iconic 
-      bulged fenders. A driver’s car, pure and mechanical.
-    </p>
+  <p>
+    It uses the S54 engine — a high-revving 3.2L inline-six with motorsport roots. 
+    Naturally aspirated, razor sharp, and one of BMW’s greatest engines.
+  </p>
 
-    <p>
-      For many enthusiasts, the E46 M3 is the definitive modern M3 — the last one 
-      before electronics started taking over.
-    </p>
-  </section>
-</main>
+  <p>
+    The car is known for its balanced chassis, hydraulic steering, and iconic 
+    bulged fenders. A driver’s car, pure and mechanical.
+  </p>
 
-<footer>
-  <a href="../index.html">&lt; Back to Main Page</a>
-</footer>
+  <p>
+    For many enthusiasts, the E46 M3 is the definitive modern M3 — the last one 
+    before electronics started taking over.
+  </p>
+
+  <p style="margin-top:40px; text-align:center;">
+    <a href="../index.html">&lt; Back to Main Page</a>
+  </p>
+
+</div>
 
 </body>
 </html>

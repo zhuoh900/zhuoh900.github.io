@@ -2,76 +2,96 @@
 <html>
 <head>
   <meta charset="utf-8" />
-  <title>E92 M3</title>
+  <title>Gear 5 — E92 M3</title>
 
-  <style>
-    body {
-      background: black;
-      color: white;
-      font-family: monospace;
-      padding: 20px;
-    }
+<style>
+ 
+  body {
+    margin: 0;
+    padding: 0;
+    background: #050505;
+    color: #f7f7f7;
+    font-family: "Inter", monospace;
+  }
 
-    header, footer {
-      text-align: center;
-      margin-bottom: 30px;
-    }
+  .entry-container {
+    max-width: 760px;
+    padding: 50px 20px;
+    margin: 0 auto;
+    line-height: 1.7;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeIn 0.7s ease forwards;
+  }
 
-    .hero img {
-      display: block;
-      width: 480px;
-      height: auto;
-      margin: 40px auto;
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
     }
+  }
+  .entry-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
 
-    .content {
-      max-width: 650px;
-      margin: 0 auto;
-      line-height: 1.6;
-      text-align: justify;
-      text-justify: inter-word;
-    }
+  .entry-sub {
+    text-align: center;
+    opacity: 0.7;
+    margin-bottom: 40px;
+  }
+  .entry-img {
+    display: block;
+    width: 100%;
+    border-radius: 14px;
+    margin: 35px 0;
+    transition: transform 0.3s ease;
+  }
+  .entry-img:hover {
+    transform: scale(1.03);
+  }
 
-    a {
-      color: white;
-      text-decoration: none;
-    }
+  a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
 
-    a:hover {
-      text-decoration: underline;
-    }
-  </style>
+
+  :root { --accent: #ff4d4d; }  
+  body.gear-5 { --accent: #ff4d4d; }
+</style>
 </head>
 
-<body>
+<body class="gear-5">
 
-<header>
-  <h2>E92 M3</h2>
-</header>
+<div class="entry-container">
 
-<main>
-  <section class="hero">
-    <img src="e92.png">
-  </section>
+  <h1 class="entry-title">Gear 5 — E92 M3</h1>
 
-  <section class="content">
-    <p>
-      The E92 M3 is the V8-powered M3 produced from 2007–2013. It uses the S65 engine — 
-      a 4.0L naturally aspirated V8 that revs to 8,400 rpm. Rear-wheel drive, with either 
-      a dual-clutch transmission or a 6-speed manual. Known for sharp handling, big fenders, 
-      a power-dome hood, and iconic quad exhausts.
-    </p>
-    <p>
-      It is the only M3 ever powered by a V8, and the last naturally aspirated M engine 
-      of its kind. The end of an era before turbocharging. Clean design, high-rev sound, 
-      and still deeply loved by enthusiasts.
-    </p>
-  </section>
-</main>
+  <img src="e92.png" class="entry-img" alt="E92 M3">
 
-<footer>
-  <a href="../index.html">&lt; Back to Main Page</a>
-</footer>
+  <p>
+    The E92 M3 is the V8-powered M3 produced from 2007–2013. It uses the S65 engine — 
+    a 4.0L naturally aspirated V8 that revs to 8,400 rpm. Rear-wheel drive, with either 
+    a dual-clutch transmission or a 6-speed manual. Known for sharp handling, big fenders, 
+    a power-dome hood, and iconic quad exhausts.
+  </p>
+
+  <p>
+    It is the only M3 ever powered by a V8, and the last naturally aspirated M engine 
+    of its kind. The end of an era before turbocharging. Clean design, high-rev sound, 
+    and still deeply loved by enthusiasts.
+  </p>
+
+  <p style="margin-top:40px; text-align:center;">
+    <a href="../index.html">&lt; Back to Main Page</a>
+  </p>
+
+</div>
 
 </body>
 </html>

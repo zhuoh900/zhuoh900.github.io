@@ -1,64 +1,134 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Random Engine Generator</title>
+  <meta charset="utf-8" />
+  <title>Gear 7 — Random Engine Generator</title>
 
   <style>
     body {
-      background: black;
-      color: white;
-      font-family: monospace;
-      padding: 20px;
+      margin: 0;
+      padding: 0;
+      background: #050505;
+      color: #f7f7f7;
+      font-family: "Inter", monospace;
+    }
+
+    .entry-container {
+      max-width: 760px;
+      padding: 50px 20px;
+      margin: 0 auto;
+      line-height: 1.7;
+      opacity: 0;
+      transform: translateY(10px);
+      animation: fadeIn 0.7s ease forwards;
       text-align: center;
     }
 
-    a {
-      color: white;
-      text-decoration: none;
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
-    a:hover {
-      text-decoration: underline;
+
+    .entry-title {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .entry-sub {
+      opacity: 0.7;
+      margin-bottom: 40px;
     }
 
     button {
       font-family: monospace;
-      padding: 8px 14px;
+      padding: 10px 18px;
       margin: 20px auto;
       cursor: pointer;
       background: #222;
       color: white;
-      border: 1px solid white;
+      border: 1px solid var(--accent);
       display: inline-block;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background: var(--accent);
+      color: black;
     }
 
     #output {
       margin: 20px auto;
-      font-size: 20px;
-      text-align: center;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    :root { --accent: #b84dff; }  
+    body.gear-7 { --accent: #b84dff; }
+
+    .content {
+      max-width: 650px;
+      margin: 30px auto 0 auto;
+      line-height: 1.6;
+      text-align: justify;
+      text-justify: inter-word;
     }
   </style>
 </head>
 
-<body>
+<body class="gear-7">
 
-  <h1>Random Engine Cylinder</h1>
+<div class="entry-container">
+
+  <h1 class="entry-title">Gear 7 — Random Engine Generator</h1>
 
   <button onclick="generateEngine()">Generate Engine</button>
 
   <p id="output">Click to see</p>
 
-  <a href="../index.html">&lt; Back to Main Page</a>
+  <div class="content">
+    <p>
+      The Random Engine Generator lets you explore engines with different cylinder counts.
+      Each engine type has its own characteristics:
+    </p>
 
-  <script>
-    const cylinders = [4, 6, 8, 10, 12];
+    <ul>
+      <li><strong>4-Cylinder:</strong> Compact and efficient, often found in daily drivers. Less power but great fuel economy.</li>
+      <li><strong>6-Cylinder:</strong> Balanced performance, smoother than 4-cylinder. Common in sports sedans and light SUVs.</li>
+      <li><strong>8-Cylinder (V8):</strong> High power and torque, classic in muscle cars and high-performance vehicles. Deep, aggressive exhaust note.</li>
+      <li><strong>10-Cylinder (V10):</strong> Rare, mostly in exotic supercars. High-revving, powerful, and thrilling to drive.</li>
+      <li><strong>12-Cylinder (V12):</strong> Ultimate refinement and smoothness, typically in luxury and hypercars. Produces immense power with silky operation.</li>
+    </ul>
 
-    function generateEngine() {
-      const randomCyl = cylinders[Math.floor(Math.random() * cylinders.length)];
-      document.getElementById("output").innerText = randomCyl + "-Cylinder Engine";
-    }
-  </script>
+    <p>
+      Click the button above to randomly generate an engine and see how its cylinder count might affect its driving characteristics.
+    </p>
+  </div>
+
+  <p style="margin-top:40px;">
+    <a href="../index.html">&lt; Back to Main Page</a>
+  </p>
+
+</div>
+
+<script>
+  const cylinders = [4, 6, 8, 10, 12];
+
+  function generateEngine() {
+    const randomCyl = cylinders[Math.floor(Math.random() * cylinders.length)];
+    document.getElementById("output").innerText = randomCyl + "-Cylinder Engine";
+  }
+</script>
 
 </body>
 </html>

@@ -1,50 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>DeLorean DMC-12</title>
-  <style>
-    body {
-      background: black;
-      color: white;
-      font-family: monospace;
-      padding: 20px;
-      text-align: center;
-    }
+  <title>Gear 6 — DeLorean DMC-12</title>
 
-    a {
-      color: white;
-      text-decoration: none;
-    }
+<style>
 
-    a:hover {
-      text-decoration: underline;
-    }
+  body {
+    margin: 0;
+    padding: 0;
+    background: #050505;
+    color: #f7f7f7;
+    font-family: "Inter", monospace;
+  }
 
-    p {
-      text-align: justify;
-      text-align-last: center;
-      max-width: 800px;
-      margin: 0 auto 20px auto;
-      line-height: 1.6;
-    }
+  .entry-container {
+    max-width: 760px;
+    padding: 50px 20px;
+    margin: 0 auto;
+    line-height: 1.7;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeIn 0.7s ease forwards;
+  }
 
-    img {
-      max-width: 100%;
-      margin: 10px auto;
-      display: block;
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
     }
-  </style>
+  }
+
+  .entry-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+
+  .entry-sub {
+    text-align: center;
+    opacity: 0.7;
+    margin-bottom: 40px;
+  }
+
+  .entry-img {
+    display: block;
+    width: 100%;
+    border-radius: 14px;
+    margin: 35px 0;
+    transition: transform 0.3s ease;
+  }
+  .entry-img:hover {
+    transform: scale(1.03);
+  }
+
+  a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  :root { --accent: #4dff8a; } 
+  body.gear-6 { --accent: #4dff8a; }
+</style>
 </head>
 
-<body>
-<h1>DeLorean DMC-12</h1>
-  <section class="hero">
-    <img src="dmc.png">
-  </section>
+<body class="gear-6">
 
-  
+<div class="entry-container">
+
+  <h1 class="entry-title">Gear 6 — DeLorean DMC-12</h1>
+
+  <img src="dmc.png" class="entry-img" alt="DeLorean DMC-12">
+
   <p>
     The DeLorean DMC-12 is considered a classic not just for its engineering, but for its lasting cultural impact.
     Its brushed stainless-steel body and distinctive gull-wing doors gave it a futuristic, timeless appearance.
@@ -53,7 +82,11 @@
     of innovative design, pop culture, and storytelling—a vehicle whose legend has far outlived its mechanical reality.
   </p>
 
-  <a href="../index.html">&lt; Back to Main Page</a>
+  <p style="margin-top:40px; text-align:center;">
+    <a href="../index.html">&lt; Back to Main Page</a>
+  </p>
+
+</div>
 
 </body>
 </html>

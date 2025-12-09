@@ -1,23 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
   <title>Move the Car</title>
-  <link rel="stylesheet" href="style.css">
+
+  <style>
+    body {
+      background: black;
+      color: white;
+      font-family: monospace;
+      padding: 20px;
+    }
+
+    header, footer {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .hero img {
+      display: block;
+      width: 480px;
+      height: auto;
+      margin: 40px auto;
+    }
+
+    .content {
+      max-width: 650px;
+      margin: 0 auto;
+      line-height: 1.6;
+      text-align: justify;
+      text-justify: inter-word;
+    }
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
+
 <body>
 
-<h1>Move the Car</h1>
+<header>
+  <h2>Move the Car</h2>
+</header>
 
-<div id="road">
-  <img id="car" src="gt3.png" alt="Car">
-</div>
+<main>
+  <section class="hero">
+    <img id="car" src="gt3.png" alt="Car">
+  </section>
 
-<p>Use left and right arrow keys to move the car</p>
+  <section class="content">
+    <p>Use the left and right arrow keys on your keyboard to move the car across the screen.</p>
+    <p>This interactive entry lets you control the car’s position in real-time, demonstrating simple JavaScript keyboard interactions.</p>
+  </section>
+</main>
 
-<a href="../index.html">&lt; Back to Main Page</a>
+<footer>
+  <a href="../index.html">&lt; Back to Main Page</a>
+</footer>
 
-<script src="script.js"></script>
+<script>
+const car = document.getElementById('car');
+let position = 0;
+const step = 20;  
+
+document.addEventListener('keydown', (e) => {
+  const windowWidth = window.innerWidth;
+  const carWidth = car.offsetWidth;
+
+  if (e.key === 'ArrowRight') {
+    position = Math.min(position + step, windowWidth - carWidth - 40);
+  } else if (e.key === 'ArrowLeft') {
+    position = Math.max(position - step, 0);
+  }
+
+  car.style.position = "relative";
+  car.style.left = position + "px";
+});
+</script>
+
 </body>
 </html>
