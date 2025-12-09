@@ -36,11 +36,6 @@
       margin-bottom: 10px;
     }
 
-    .entry-sub {
-      opacity: 0.7;
-      margin-bottom: 40px;
-    }
-
     a {
       color: white;
       text-decoration: none;
@@ -64,6 +59,7 @@
       width: 100%;
       display: block;
     }
+
     #needle {
       width: 4px;
       height: 50px;
@@ -76,6 +72,12 @@
       transition: transform 0.2s ease-out;
     }
 
+    .content {
+      max-width: 700px;
+      margin: 30px auto 0 auto;
+      line-height: 1.7;
+      text-align: justify;
+    }
   </style>
 </head>
 
@@ -84,6 +86,7 @@
 <div class="entry-container">
 
   <h1 class="entry-title">Car RPM Controller</h1>
+
   <div id="rpmGauge">
     <img id="gaugeImg" src="rpm.png" alt="RPM Gauge">
     <div id="needle"></div>
@@ -91,6 +94,20 @@
 
   <div class="label">RPM:</div>
   <input id="rpmSlider" type="range" min="0" max="8000" value="0">
+
+  <div class="content">
+    <p>
+      The Car RPM Controller lets you interactively adjust the engine's revolutions per minute (RPM) using a slider.
+      As you change the RPM, you can observe how engine speed increases or decreases, giving a visual sense of performance
+      and engine behavior. This simple simulation demonstrates the relationship between throttle input and engine response,
+      helping users understand how RPM affects a car's driving dynamics.
+    </p>
+
+    <p>
+      Experiment with different RPM values to see how high-revving engines operate compared to lower RPMs. 
+      This entry is an interactive exploration of engine mechanics and car performance, designed to be both educational and engaging.
+    </p>
+  </div>
 
   <p style="margin-top:40px;">
     <a href="../index.html">&lt; Back to Main Page</a>

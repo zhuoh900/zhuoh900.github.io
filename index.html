@@ -49,7 +49,25 @@
     <a class="entry" href="entry-9/index.html">7</a>
 </div>
 
-</div>
+<script>
+
+  const gearColors = ['#ffcccc', '#ff9999', '#ff6666', '#ff3333', '#ff0000', '#990000'];
+
+  document.querySelectorAll('.entry').forEach(el => {
+    const text = el.innerText;
+    if (text === 'R') {
+      el.style.color = '#ffcccc'; 
+    } else if (text === 'N') {
+      el.style.color = '#ffffff'; 
+    } else {
+      const num = parseInt(text);
+      if (!isNaN(num) && num >= 1 && num <= 7) {
+  
+        el.style.color = gearColors[num - 1] || '#990000';
+      }
+    }
+  });
+</script>
 
 </body>
 </html>

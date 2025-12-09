@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8" />
-  <title>Move the Car</title>
+  <title>911 GT3 RS</title>
 
   <style>
     body {
@@ -22,6 +22,7 @@
       width: 480px;
       height: auto;
       margin: 40px auto;
+      position: relative;
     }
 
     .content {
@@ -45,7 +46,7 @@
 <body>
 
 <header>
-  <h2>Move the Car</h2>
+  <h2>Porsche 911 GT3 RS</h2>
 </header>
 
 <main>
@@ -54,8 +55,13 @@
   </section>
 
   <section class="content">
-    <p>Use the left and right arrow keys on your keyboard to move the car across the screen.</p>
-    <p>This interactive entry lets you control the car’s position in real-time, demonstrating simple JavaScript keyboard interactions.</p>
+    <p>The Porsche 911 GT3 RS is a track-focused variant of the legendary 911, built for ultimate performance on both road and circuit.</p>
+
+    <p>Powered by a naturally aspirated 4.0L flat-six engine, it delivers a high-revving and exhilarating driving experience.</p>
+
+    <p>Its lightweight construction, aggressive aerodynamics, and rear-wheel drive chassis provide razor-sharp handling and incredible cornering capabilities. The GT3 RS embodies the purest essence of a driver’s car—mechanical precision, minimal electronics, and a thrilling exhaust note.</p>
+
+    <p>With advanced suspension, large brakes, and extensive use of carbon fiber, it is engineered for high-speed stability, agility, and track dominance. Not just a supercar, the GT3 RS is a race car for enthusiasts who crave every ounce of performance.</p>
   </section>
 </main>
 
@@ -78,7 +84,6 @@ document.addEventListener('keydown', (e) => {
     position = Math.max(position - step, 0);
   }
 
-  car.style.position = "relative";
   car.style.left = position + "px";
 });
 </script>
