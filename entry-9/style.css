@@ -37,3 +37,63 @@ a:hover {
   transition: left 0.1s; 
 }
 
+p {
+  color:  #990000;
+}
+
+h1.entry-title {
+  color:  #990000;
+}
+
+body {
+  background: #050505;      
+ 
+  font-family: "Inter", monospace; 
+  padding: 50px 20px;
+  text-align: center;
+}
+
+header, footer {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+h1.entry-title {
+  color: #990000 !important;  
+}
+
+
+.entry-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+.hero img {
+  display: block;
+  width: 480px;
+  max-width: 100%;
+  height: auto;
+  margin: 40px auto;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.hero img:hover {
+  transform: scale(1.03);
+}
+.content {
+  max-width: 650px;
+  margin: 0 auto;
+  font-size: 1rem;  
+  line-height: 1.7;
+  text-align: justify;
+  text-justify: inter-word;
+}
+a {
+  color: #4db4ff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+

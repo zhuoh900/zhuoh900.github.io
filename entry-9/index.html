@@ -3,13 +3,23 @@
 <head>
   <meta charset="utf-8" />
   <title>911 GT3 RS</title>
-
   <style>
     body {
-      background: black;
-      color: white;
-      font-family: monospace;
-      padding: 20px;
+      background: #050505;
+      color: #f7f7f7;
+      font-family: "Inter", monospace;
+      padding: 50px 20px;
+      text-align: center;
+      margin: 0;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: #4db4ff;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
     }
 
     header, footer {
@@ -17,28 +27,47 @@
       margin-bottom: 30px;
     }
 
+    h1, h2, .entry-title {
+      color: #990000;
+    }
+
+    .entry-title {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
     .hero img {
       display: block;
       width: 480px;
+      max-width: 100%;
       height: auto;
       margin: 40px auto;
       position: relative;
+      transition: transform 0.3s ease;
+    }
+
+    .hero img:hover {
+      transform: scale(1.03);
     }
 
     .content {
       max-width: 650px;
       margin: 0 auto;
-      line-height: 1.6;
+      font-size: 1rem;
+      line-height: 1.7;
       text-align: justify;
       text-justify: inter-word;
+      color: #990000;
     }
 
-    a {
-      color: white;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
+    #car {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 120px;
+      height: auto;
+      transition: left 0.1s;
     }
   </style>
 </head>
@@ -72,14 +101,14 @@
 <script>
 const car = document.getElementById('car');
 let position = 0;
-const step = 20;  
+const step = 20;
 
 document.addEventListener('keydown', (e) => {
   const windowWidth = window.innerWidth;
   const carWidth = car.offsetWidth;
 
   if (e.key === 'ArrowRight') {
-    position = Math.min(position + step, windowWidth - carWidth - 40);
+    position = Math.min(position + step, windowWidth - carWidth - 20);
   } else if (e.key === 'ArrowLeft') {
     position = Math.max(position - step, 0);
   }
