@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-  
+
   <meta charset="utf-8" />
-  <title>Gear 7 — Random Engine Generator</title>
+  <title>BMW Style — Warning Light Generator</title>
 
   <style>
     body {
       margin: 0;
       padding: 0;
-      background: #050505;
+      background: #000;
       color: #ff0000;
       font-family: "Inter", monospace;
     }
@@ -63,27 +63,23 @@
       margin: 20px auto;
       font-size: 22px;
       font-weight: bold;
-    }
-
-    a {
       color: var(--accent);
-      text-decoration: none;
+      text-shadow: 0 0 8px #ff0000;
     }
 
-    a:hover {
-      text-decoration: underline;
+    #explain {
+      margin-top: 20px;
+      color: #ff4d4d;
+      font-size: 16px;
+      max-width: 650px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.6;
     }
 
     :root { --accent: #4db4ff; }  
     body.gear-7 { --accent: #4db4ff; }
 
-    .content {
-      max-width: 650px;
-      margin: 30px auto 0 auto;
-      line-height: 1.6;
-      text-align: justify;
-      text-justify: inter-word;
-    }
   </style>
 </head>
 
@@ -91,41 +87,67 @@
 
 <div class="entry-container">
 
-  <h1 class="entry-title">Random Engine Generator</h1>
+  <h1 class="entry-title">BMW Error Generator</h1>
 
-  <button onclick="generateEngine()">Generate Engine</button>
+  <button onclick="generateWarning()">Generate Warning</button>
 
-  <p id="output">Click to see</p>
-
-  <div class="content">
-    <p>
-      The Random Engine Generator lets you explore engines with different cylinder counts.
-      Each engine type has its own characteristics:
-    </p>
-
-    <ul>
-      <li><strong>4-Cylinder:</strong> Compact and efficient, often found in daily drivers. Less power but great fuel economy.</li>
-      <li><strong>6-Cylinder:</strong> Balanced performance, smoother than 4-cylinder. Common in sports sedans and light SUVs.</li>
-      <li><strong>8-Cylinder (V8):</strong> High power and torque, classic in muscle cars and high-performance vehicles. Deep, aggressive exhaust note.</li>
-      <li><strong>10-Cylinder (V10):</strong> Rare, mostly in exotic supercars. High-revving, powerful, and thrilling to drive.</li>
-      <li><strong>12-Cylinder (V12):</strong> Ultimate refinement and smoothness, typically in luxury and hypercars. Produces immense power with silky operation.</li>
-    </ul>
-
-  
-  </div>
+  <p id="output">Click to see a BMW warning</p>
+  <p id="explain"></p>
 
   <p style="margin-top:40px;">
-    <a href="../index.html">&lt; Back to Main Page</a>
+    <a href="../index.html" style="color:var(--accent); text-decoration:none;">&lt; Back to Main Page</a>
   </p>
 
 </div>
 
 <script>
-  const cylinders = [4, 6, 8, 10, 12];
+  const warnings = [
+    {
+      name: "Engine Malfunction — Reduced Power",
+      explain: "The engine control system detected an issue. The vehicle may enter reduced power mode. Causes may include ignition issues, turbo faults, fuel delivery problems, or airflow sensor malfunction."
+    },
+    {
+      name: "Drivetrain Malfunction",
+      explain: "A fault was detected in the drivetrain system. The vehicle may not deliver full power. Possible causes include transmission issues, differential faults, or electronic control module errors."
+    },
+    {
+      name: "Low Oil Pressure",
+      explain: "The oil pressure is too low. Driving may cause severe engine damage. Stop immediately and check the oil level. If the level is normal, the oil pump or oil system may be failing."
+    },
+    {
+      name: "Transmission Fault",
+      explain: "There is a problem with the transmission system. Symptoms may include harsh shifting, inability to shift, or entering emergency mode. Professional inspection is recommended."
+    },
+    {
+      name: "ABS / DSC Malfunction",
+      explain: "Anti-lock Braking System or Dynamic Stability Control is not functioning. Braking performance may be reduced, especially on slippery surfaces."
+    },
+    {
+      name: "TPMS — Tire Pressure Low",
+      explain: "One or more tires have low pressure, or a sensor has failed. Low tire pressure can lead to tire wear, poor handling, and potential blowouts."
+    },
+    {
+      name: "Battery / Charging System Fault",
+      explain: "A fault was detected in the charging system. The vehicle may lose electrical power. Do not turn off the engine and inspect the battery and alternator."
+    },
+    {
+      name: "High Coolant Temperature",
+      explain: "The engine coolant temperature is too high. Possible causes include low coolant, water pump failure, thermostat issues, or radiator fan malfunction."
+    },
+    {
+      name: "Airbag System Fault",
+      explain: "The airbag system is not operating correctly. Airbags may not deploy during a crash or may activate incorrectly. Immediate inspection is required."
+    },
+    {
+      name: "Brake System Issue",
+      explain: "A fault was found in the brake system. Possible causes include low brake fluid, worn brake pads, or brake booster malfunction. Safety may be compromised."
+    }
+  ];
 
-  function generateEngine() {
-    const randomCyl = cylinders[Math.floor(Math.random() * cylinders.length)];
-    document.getElementById("output").innerText = randomCyl + "-Cylinder Engine";
+  function generateWarning() {
+    const r = Math.floor(Math.random() * warnings.length);
+    document.getElementById("output").innerText = warnings[r].name;
+    document.getElementById("explain").innerText = warnings[r].explain;
   }
 </script>
 
