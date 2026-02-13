@@ -2,72 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>dashboard</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
 <body>
-
-<div class="dash">
-  <div class="screen">
-   <div class="label">SPEED</div>
- <div class="value big">215</div>
-
-    <div class="row">
-   <div class="col">
-  <div class="label">RPM</div>
-      <div class="value">7421</div>
-   </div>
-   <div class="col">
-       <div class="label">GEAR</div>
-     <div class="value">4</div>
-     </div>
-    </div>
-
-    <div class="row">
-     <div class="col">
-     <div class="label">OIL°C</div>
-    <div class="value">92</div>
-    </div>
-    <div class="col">
-   <div class="label">WATER°C</div>
-     <div class="value">78</div>
-   </div>
-    </div>
-  </div>
-
-
-
-  <div class="entries">
-    <a class="entry" href="entry-1/index.html">R</a>
-    <a class="entry" href="entry-2/index.html">N</a>
-    <a class="entry" href="entry-3/index.html">1</a>
-    <a class="entry" href="entry-4/index.html">2</a>
-    <a class="entry" href="entry-5/index.html">3</a>
-    <a class="entry" href="entry-6/index.html">4</a>
-    <a class="entry" href="entry-7/index.html">5</a>
-    <a class="entry" href="entry-8/index.html">6</a>
-    <a class="entry" href="entry-9/index.html">7</a>
-</div>
-
-<script>
-
-  const gearColors = ['#ffcccc', '#ff9999', '#ff6666', '#ff3333', '#ff0000', '#990000'];
-
-  document.querySelectorAll('.entry').forEach(el => {
-    const text = el.innerText;
-    if (text === 'R') {
-      el.style.color = '#ffcccc'; 
-    } else if (text === 'N') {
-      el.style.color = '#ffffff'; 
-    } else {
-      const num = parseInt(text);
-      if (!isNaN(num) && num >= 1 && num <= 7) {
   
-        el.style.color = gearColors[num - 1] || '#990000';
-      }
-    }
-  });
-</script>
-
 </body>
 </html>
