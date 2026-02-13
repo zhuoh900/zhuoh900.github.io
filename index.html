@@ -40,7 +40,7 @@ renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize(innerWidth, innerHeight);
 document.body.appendChild(renderer.domElement);
 
-/* 球体 */
+
 const sphere = new THREE.Mesh(
     new THREE.SphereGeometry(6, 16, 16),
     new THREE.MeshBasicMaterial({
@@ -52,7 +52,7 @@ const sphere = new THREE.Mesh(
 );
 scene.add(sphere);
 
-/* 文本数据库（短段落示例） */
+
 const textData = [
 {
     title: "All things happen… precisely now",
@@ -115,12 +115,12 @@ textData.forEach((item, i) => {
 
     distribute(sprite, i, textData.length, 6);
 
-    sprite.userData = item;          // ⭐ 绑定段落数据
+    sprite.userData = item;        
     sphere.add(sprite);
     sprites.push(sprite);
 });
 
-/* 点击检测系统 */
+
 const raycaster = new THREE.Raycaster();
 const mouse = new THREE.Vector2();
 
@@ -148,16 +148,16 @@ function showParagraph(text) {
     overlay.innerText = text;
     overlay.style.display = "block";
 
-    sphere.visible = false;   // ⭐ 隐藏宇宙
+    sphere.visible = false;  
 }
 
 overlay.addEventListener("click", () => {
 
     overlay.style.display = "none";
-    sphere.visible = true;    // ⭐ 返回球体
+    sphere.visible = true;  
 });
 
-/* 动画 */
+
 function animate() {
     requestAnimationFrame(animate);
 
